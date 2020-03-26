@@ -1,24 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ih-hG-wyN">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="mMg-sL-2fP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ih-hG-wyN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NjA-Yu-R2x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EDb-qr-v4W" kind="relationship" relationship="rootViewController" id="2Bn-cP-kI9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhO-EO-FYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-457" y="-467"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="wxa-Bm-iOb">
+            <objects>
+                <tableViewController id="c7S-no-79P" customClass="iPhoneTableViewController" customModule="iOSApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oTj-5g-BMP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="gOf-QN-0Yf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="q1G-kY-EzV" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1G-kY-EzV" id="0U8-ys-vts">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone8" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-Sd-Vxy">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="10B-tx-I9L"/>
+                                                        <constraint firstAttribute="height" constant="120" id="Pn4-ba-Afv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4S-Xe-Sff">
+                                                    <rect key="frame" x="190" y="63.666666666666664" width="67.666666666666686" height="22.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="o4S-Xe-Sff" secondAttribute="height" multiplier="3:1" id="86C-Xq-3Wh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ZMm-Sd-Vxy" secondAttribute="bottom" constant="15" id="9Qz-3h-Soa"/>
+                                                <constraint firstItem="o4S-Xe-Sff" firstAttribute="centerY" secondItem="0U8-ys-vts" secondAttribute="centerY" id="Vot-Fw-nCn"/>
+                                                <constraint firstItem="ZMm-Sd-Vxy" firstAttribute="centerY" secondItem="0U8-ys-vts" secondAttribute="centerY" id="aWJ-Bs-GmY"/>
+                                                <constraint firstItem="o4S-Xe-Sff" firstAttribute="leading" secondItem="ZMm-Sd-Vxy" secondAttribute="trailing" constant="50" id="aZG-rW-SAB"/>
+                                                <constraint firstItem="ZMm-Sd-Vxy" firstAttribute="top" secondItem="0U8-ys-vts" secondAttribute="top" constant="15" id="qEd-OP-ZmO"/>
+                                                <constraint firstItem="ZMm-Sd-Vxy" firstAttribute="leading" secondItem="0U8-ys-vts" secondAttribute="leading" constant="20" id="qaa-3v-jiD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="OL8-9T-PuT" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OL8-9T-PuT" id="2PM-Pt-pTi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone8-plus" translatesAutoresizingMaskIntoConstraints="NO" id="EB7-6m-X9D">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="odg-8V-R9Q"/>
+                                                        <constraint firstAttribute="height" constant="120" id="wDx-c4-PP6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 8 Plus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-95-q08">
+                                                    <rect key="frame" x="190" y="57.666666666666671" width="104.66666666666669" height="34.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Tix-95-q08" secondAttribute="height" multiplier="3:1" id="ymJ-1D-XNw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tix-95-q08" firstAttribute="leading" secondItem="EB7-6m-X9D" secondAttribute="trailing" constant="50" id="DIQ-WY-NfT"/>
+                                                <constraint firstItem="Tix-95-q08" firstAttribute="centerY" secondItem="2PM-Pt-pTi" secondAttribute="centerY" id="Dl6-nJ-NHr"/>
+                                                <constraint firstAttribute="bottom" secondItem="EB7-6m-X9D" secondAttribute="bottom" constant="15" id="fdK-Qg-D8q"/>
+                                                <constraint firstItem="EB7-6m-X9D" firstAttribute="leading" secondItem="2PM-Pt-pTi" secondAttribute="leading" constant="20" id="i8e-f0-kND"/>
+                                                <constraint firstItem="EB7-6m-X9D" firstAttribute="centerY" secondItem="2PM-Pt-pTi" secondAttribute="centerY" id="onY-K9-saL"/>
+                                                <constraint firstItem="EB7-6m-X9D" firstAttribute="top" secondItem="2PM-Pt-pTi" secondAttribute="top" constant="15" id="xCX-t7-3eQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="lEy-3N-3e1" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lEy-3N-3e1" id="vTa-GP-CaT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone-xr" translatesAutoresizingMaskIntoConstraints="NO" id="GwI-5k-wNL">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="ge1-kY-eOs"/>
+                                                        <constraint firstAttribute="width" constant="120" id="sSr-cu-ryy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone XR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmd-iz-POb">
+                                                    <rect key="frame" x="190" y="62.000000000000007" width="79" height="26.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Xmd-iz-POb" secondAttribute="height" multiplier="3:1" id="rc5-JN-w0m"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GwI-5k-wNL" firstAttribute="top" secondItem="vTa-GP-CaT" secondAttribute="top" constant="15" id="49u-i9-XD6"/>
+                                                <constraint firstAttribute="bottom" secondItem="GwI-5k-wNL" secondAttribute="bottom" constant="15" id="I2v-Az-ntN"/>
+                                                <constraint firstItem="GwI-5k-wNL" firstAttribute="leading" secondItem="vTa-GP-CaT" secondAttribute="leading" constant="20" id="OeG-qO-UNI"/>
+                                                <constraint firstItem="Xmd-iz-POb" firstAttribute="leading" secondItem="GwI-5k-wNL" secondAttribute="trailing" constant="50" id="Otj-0Y-SOR"/>
+                                                <constraint firstItem="GwI-5k-wNL" firstAttribute="centerY" secondItem="vTa-GP-CaT" secondAttribute="centerY" id="fH7-4A-7zH"/>
+                                                <constraint firstItem="Xmd-iz-POb" firstAttribute="centerY" secondItem="vTa-GP-CaT" secondAttribute="centerY" id="s7i-ka-AlC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="lRE-xx-EdX" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="478" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lRE-xx-EdX" id="VAW-MS-nOx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone11" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-zb-jwk">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="9NS-nl-KgQ"/>
+                                                        <constraint firstAttribute="width" constant="120" id="Eqa-9c-W3y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I10-yh-PNO">
+                                                    <rect key="frame" x="190" y="63" width="72" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="I10-yh-PNO" secondAttribute="height" multiplier="3:1" id="sJq-gv-2Xw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Kv-zb-jwk" firstAttribute="top" secondItem="VAW-MS-nOx" secondAttribute="top" constant="15" id="PKO-Bb-mNf"/>
+                                                <constraint firstItem="9Kv-zb-jwk" firstAttribute="leading" secondItem="VAW-MS-nOx" secondAttribute="leading" constant="20" id="VXA-EW-Mdp"/>
+                                                <constraint firstItem="9Kv-zb-jwk" firstAttribute="centerY" secondItem="VAW-MS-nOx" secondAttribute="centerY" id="ba5-bA-bLD"/>
+                                                <constraint firstItem="I10-yh-PNO" firstAttribute="leading" secondItem="9Kv-zb-jwk" secondAttribute="trailing" constant="50" id="enW-g9-wVq"/>
+                                                <constraint firstItem="I10-yh-PNO" firstAttribute="centerY" secondItem="VAW-MS-nOx" secondAttribute="centerY" id="f04-cb-Je6"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Kv-zb-jwk" secondAttribute="bottom" constant="15" id="o3m-Ng-TqI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="WC1-Ju-UPX" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="628" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WC1-Ju-UPX" id="XZL-16-1RR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone-11-pro" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-wC-GjX">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="FEv-5W-rDa"/>
+                                                        <constraint firstAttribute="width" constant="120" id="k2N-Fx-QjS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 11 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmZ-sU-xy7">
+                                                    <rect key="frame" x="190" y="58" width="102.66666666666669" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="RmZ-sU-xy7" secondAttribute="height" multiplier="3:1" id="4FR-fy-cuL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JEg-wC-GjX" firstAttribute="top" secondItem="XZL-16-1RR" secondAttribute="top" constant="15" id="0oW-qX-YfT"/>
+                                                <constraint firstItem="JEg-wC-GjX" firstAttribute="leading" secondItem="XZL-16-1RR" secondAttribute="leading" constant="20" id="2u4-hz-q3c"/>
+                                                <constraint firstItem="JEg-wC-GjX" firstAttribute="centerY" secondItem="XZL-16-1RR" secondAttribute="centerY" id="I6I-bq-5Gs"/>
+                                                <constraint firstAttribute="bottom" secondItem="JEg-wC-GjX" secondAttribute="bottom" constant="15" id="Juq-jg-Icb"/>
+                                                <constraint firstItem="RmZ-sU-xy7" firstAttribute="centerY" secondItem="XZL-16-1RR" secondAttribute="centerY" id="m1R-Hs-Ewr"/>
+                                                <constraint firstItem="RmZ-sU-xy7" firstAttribute="leading" secondItem="JEg-wC-GjX" secondAttribute="trailing" constant="50" id="xjM-kQ-zNY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="8Cl-8R-PZB" customClass="iPhoneTableViewCell" customModule="iOSApp1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="778" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Cl-8R-PZB" id="37m-mq-pFe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone-11-pro-max" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-7c-vlL">
+                                                    <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="EAS-1E-Sil"/>
+                                                        <constraint firstAttribute="width" constant="120" id="JUa-D8-bSg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 11 Pro Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-KY-a7d">
+                                                    <rect key="frame" x="190" y="52" width="139" height="46.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="iWr-KY-a7d" secondAttribute="height" multiplier="3:1" id="ftx-uT-c21"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iWr-KY-a7d" firstAttribute="leading" secondItem="YKe-7c-vlL" secondAttribute="trailing" constant="50" id="6Ej-L1-EeH"/>
+                                                <constraint firstItem="YKe-7c-vlL" firstAttribute="leading" secondItem="37m-mq-pFe" secondAttribute="leading" constant="20" id="Lww-7C-7re"/>
+                                                <constraint firstItem="iWr-KY-a7d" firstAttribute="centerY" secondItem="37m-mq-pFe" secondAttribute="centerY" id="Y1f-6g-h2R"/>
+                                                <constraint firstAttribute="bottom" secondItem="YKe-7c-vlL" secondAttribute="bottom" constant="15" id="YFf-Ov-KvS"/>
+                                                <constraint firstItem="YKe-7c-vlL" firstAttribute="top" secondItem="37m-mq-pFe" secondAttribute="top" constant="15" id="aNf-0t-26L"/>
+                                                <constraint firstItem="YKe-7c-vlL" firstAttribute="centerY" secondItem="37m-mq-pFe" secondAttribute="centerY" id="ybZ-ij-OtD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="c7S-no-79P" id="gLI-bQ-9k2"/>
+                            <outlet property="delegate" destination="c7S-no-79P" id="sYU-FW-y6v"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="dkz-8W-aoi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTw-RI-AOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515.94202898550725" y="-225"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Df5-xt-yIj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EDb-qr-v4W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TWO-Nk-o0L"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tk9-Cm-PbE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c7S-no-79P" kind="relationship" relationship="viewControllers" id="271-0N-33I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grk-A3-ERs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="269"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iphone-11-pro" width="470" height="556"/>
+        <image name="iphone-11-pro-max" width="470" height="556"/>
+        <image name="iphone-xr" width="470" height="556"/>
+        <image name="iphone11" width="470" height="556"/>
+        <image name="iphone8" width="470" height="556"/>
+        <image name="iphone8-plus" width="470" height="556"/>
+    </resources>
 </document>
